@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaShoppingCart, FaTasks, FaCloudSunRain, FaUserCircle, FaChartLine, FaBlog } from 'react-icons/fa';
 
 const Projects = () => {
   const projects = [
@@ -9,7 +9,9 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       github: 'https://github.com',
       demo: 'https://example.com',
-      image: 'https://via.placeholder.com/600x400/0ea5e9/ffffff?text=E-Commerce',
+      gradient: 'from-sky-400 via-blue-500 to-indigo-600',
+      icon: FaShoppingCart,
+      pattern: 'dots',
     },
     {
       title: 'Task Management App',
@@ -17,7 +19,9 @@ const Projects = () => {
       technologies: ['React', 'Firebase', 'TailwindCSS'],
       github: 'https://github.com',
       demo: 'https://example.com',
-      image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Task+Manager',
+      gradient: 'from-purple-400 via-violet-500 to-purple-600',
+      icon: FaTasks,
+      pattern: 'squares',
     },
     {
       title: 'Weather Dashboard',
@@ -25,7 +29,9 @@ const Projects = () => {
       technologies: ['React', 'OpenWeather API', 'Chart.js'],
       github: 'https://github.com',
       demo: 'https://example.com',
-      image: 'https://via.placeholder.com/600x400/10b981/ffffff?text=Weather+App',
+      gradient: 'from-emerald-400 via-teal-500 to-cyan-600',
+      icon: FaCloudSunRain,
+      pattern: 'circles',
     },
     {
       title: 'Portfolio Generator',
@@ -33,7 +39,9 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Express', 'PostgreSQL'],
       github: 'https://github.com',
       demo: 'https://example.com',
-      image: 'https://via.placeholder.com/600x400/f59e0b/ffffff?text=Portfolio+Gen',
+      gradient: 'from-amber-400 via-orange-500 to-red-600',
+      icon: FaUserCircle,
+      pattern: 'waves',
     },
     {
       title: 'Social Media Dashboard',
@@ -41,7 +49,9 @@ const Projects = () => {
       technologies: ['Next.js', 'TypeScript', 'Prisma', 'TailwindCSS'],
       github: 'https://github.com',
       demo: 'https://example.com',
-      image: 'https://via.placeholder.com/600x400/ef4444/ffffff?text=Social+Dashboard',
+      gradient: 'from-rose-400 via-pink-500 to-fuchsia-600',
+      icon: FaChartLine,
+      pattern: 'grid',
     },
     {
       title: 'Blog Platform',
@@ -49,7 +59,9 @@ const Projects = () => {
       technologies: ['React', 'GraphQL', 'Apollo', 'MongoDB'],
       github: 'https://github.com',
       demo: 'https://example.com',
-      image: 'https://via.placeholder.com/600x400/6366f1/ffffff?text=Blog+Platform',
+      gradient: 'from-indigo-400 via-blue-500 to-purple-600',
+      icon: FaBlog,
+      pattern: 'hexagons',
     },
   ];
 
@@ -67,59 +79,130 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative overflow-hidden group">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-white rounded-full hover:bg-gray-100 transition-colors"
-                    aria-label="View GitHub"
-                  >
-                    <FaGithub size={24} className="text-gray-900" />
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-white rounded-full hover:bg-gray-100 transition-colors"
-                    aria-label="View Demo"
-                  >
-                    <FaExternalLinkAlt size={20} className="text-gray-900" />
-                  </a>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full"
+          {projects.map((project, index) => {
+            const IconComponent = project.icon;
+            return (
+              <div
+                key={index}
+                className="bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative overflow-hidden group h-48">
+                  {/* Gradient Background */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient}`}>
+                    {/* Pattern Overlay */}
+                    <div className="absolute inset-0 opacity-10">
+                      {project.pattern === 'dots' && (
+                        <svg width="100%" height="100%">
+                          <defs>
+                            <pattern id={`dots-${index}`} x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                              <circle cx="2" cy="2" r="2" fill="white" />
+                            </pattern>
+                          </defs>
+                          <rect width="100%" height="100%" fill={`url(#dots-${index})`} />
+                        </svg>
+                      )}
+                      {project.pattern === 'squares' && (
+                        <svg width="100%" height="100%">
+                          <defs>
+                            <pattern id={`squares-${index}`} x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                              <rect x="0" y="0" width="15" height="15" fill="white" />
+                            </pattern>
+                          </defs>
+                          <rect width="100%" height="100%" fill={`url(#squares-${index})`} />
+                        </svg>
+                      )}
+                      {project.pattern === 'circles' && (
+                        <svg width="100%" height="100%">
+                          <defs>
+                            <pattern id={`circles-${index}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                              <circle cx="20" cy="20" r="10" fill="none" stroke="white" strokeWidth="2" />
+                            </pattern>
+                          </defs>
+                          <rect width="100%" height="100%" fill={`url(#circles-${index})`} />
+                        </svg>
+                      )}
+                      {project.pattern === 'waves' && (
+                        <svg width="100%" height="100%">
+                          <defs>
+                            <pattern id={`waves-${index}`} x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+                              <path d="M 0 10 Q 10 0, 20 10 Q 30 20, 40 10" fill="none" stroke="white" strokeWidth="2" />
+                            </pattern>
+                          </defs>
+                          <rect width="100%" height="100%" fill={`url(#waves-${index})`} />
+                        </svg>
+                      )}
+                      {project.pattern === 'grid' && (
+                        <svg width="100%" height="100%">
+                          <defs>
+                            <pattern id={`grid-${index}`} x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                              <path d="M 30 0 L 0 0 0 30" fill="none" stroke="white" strokeWidth="1" />
+                            </pattern>
+                          </defs>
+                          <rect width="100%" height="100%" fill={`url(#grid-${index})`} />
+                        </svg>
+                      )}
+                      {project.pattern === 'hexagons' && (
+                        <svg width="100%" height="100%">
+                          <defs>
+                            <pattern id={`hexagons-${index}`} x="0" y="0" width="56" height="100" patternUnits="userSpaceOnUse">
+                              <path d="M28 0 L56 25 L56 75 L28 100 L0 75 L0 25 Z" fill="none" stroke="white" strokeWidth="2" />
+                            </pattern>
+                          </defs>
+                          <rect width="100%" height="100%" fill={`url(#hexagons-${index})`} />
+                        </svg>
+                      )}
+                    </div>
+                    
+                    {/* Icon */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <IconComponent className="text-white text-7xl opacity-90 transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                    </div>
+                  </div>
+                  
+                  {/* Hover Overlay with Links */}
+                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white rounded-full hover:bg-gray-100 transition-colors transform hover:scale-110"
+                      aria-label="View GitHub"
                     >
-                      {tech}
-                    </span>
-                  ))}
+                      <FaGithub size={24} className="text-gray-900" />
+                    </a>
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white rounded-full hover:bg-gray-100 transition-colors transform hover:scale-110"
+                      aria-label="View Demo"
+                    >
+                      <FaExternalLinkAlt size={20} className="text-gray-900" />
+                    </a>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
