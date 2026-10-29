@@ -1,0 +1,5 @@
+title: Ashik Bro | Developer Portfolio
+description: Projects, skills, and technical work by Ashik Bro.
+theme: minima
+plugins:
+  - jekyll-seo-tag
