@@ -65,6 +65,18 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
 .project-card > p:not(.project-type) { max-width: 360px; margin-bottom: auto; color: inherit; opacity: .72; font-size: 13px; line-height: 1.7; }
 .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 28px; }
 .project-tags span, .capabilities span { padding: 7px 10px; border: 1px solid currentColor; border-radius: 30px; font: 10px var(--mono); opacity: .7; }
+.project-directory { margin-top: 72px; }
+.directory-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 20px; }
+.directory-heading .eyebrow { margin-bottom: 0; }
+.directory-list { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); }
+.directory-item { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 82px; padding: 18px 4px; border-bottom: 1px solid var(--line); transition: padding .2s, color .2s; }
+.directory-item:nth-child(odd) { margin-right: 28px; }
+.directory-item:nth-child(even) { margin-left: 28px; }
+.directory-item:hover { padding-left: 10px; color: var(--orange); }
+.directory-item strong, .directory-item small { display: block; }
+.directory-item strong { color: var(--ink); font-size: 14px; letter-spacing: -.03em; }
+.directory-item small { margin-top: 6px; color: var(--muted); font: 10px var(--mono); }
+.directory-arrow { color: var(--ink); font-size: 20px; }
 .about-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; padding-top: 120px; padding-bottom: 120px; border-top: 1px solid var(--line); }
 .about-stamp { align-self: start; width: 180px; height: 180px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; color: var(--orange); text-align: center; transform: rotate(-12deg); font: 11px/1.5 var(--mono); letter-spacing: .12em; }
 .about-copy h2 { max-width: 600px; margin-bottom: 30px; }
@@ -93,6 +105,11 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
   .section-note { width: auto; margin-top: 25px; }
   .project-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 320px; }
+  .project-directory { margin-top: 58px; }
+  .directory-heading { display: block; }
+  .directory-heading .text-link { display: inline-block; margin-top: 8px; }
+  .directory-list { grid-template-columns: 1fr; }
+  .directory-item:nth-child(odd), .directory-item:nth-child(even) { margin-left: 0; margin-right: 0; }
   .about-section { display: block; padding: 75px 0; }
   .about-stamp { margin: 0 0 55px auto; }
   .contact-section { padding: 48px 30px; }
