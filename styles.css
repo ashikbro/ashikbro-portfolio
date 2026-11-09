@@ -119,6 +119,13 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
 .about-copy h2 { max-width: 600px; margin-bottom: 30px; }
 .about-copy > p:not(.eyebrow) { max-width: 590px; color: var(--muted); font-size: 15px; line-height: 1.85; }
 .capabilities { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 34px; }
+.experience-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; border-top: 1px solid var(--line); }
+.timeline { margin: 0; padding: 0; list-style: none; }
+.timeline li { padding: 22px 0; border-top: 1px solid var(--line); }
+.timeline-date { margin-bottom: 10px; color: var(--muted); font: 11px var(--mono); text-transform: uppercase; letter-spacing: .12em; }
+.timeline h3 { margin-bottom: 4px; font-size: 19px; letter-spacing: -.03em; }
+.timeline-org { margin-bottom: 12px; color: var(--orange); font-size: 13px; font-weight: 700; }
+.timeline li > p:last-child { max-width: 590px; margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
 .skills-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; border-top: 1px solid var(--line); }
 .skills-list > div { padding: 18px 0; border-top: 1px solid var(--line); }
 .skills-list h3 { margin-bottom: 9px; font: 11px var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
@@ -158,7 +165,8 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
   .directory-item:nth-child(odd), .directory-item:nth-child(even) { margin-left: 0; margin-right: 0; }
   .about-section { display: block; padding: 75px 0; }
   .about-stamp { margin: 0 0 55px auto; }
-  .skills-section { display: block; }
+  .skills-section, .experience-section { display: block; }
+  .timeline { margin-top: 35px; }
   .skills-list { margin-top: 35px; }
   .contact-section { padding: 48px 30px; }
   .contact-action { margin-top: 38px; }
