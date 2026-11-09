@@ -6,7 +6,9 @@
     <meta name="description" content="Ashikur Rahman's portfolio — software builder exploring useful products, AI, and decentralized technology." />
     <title>Ashikur Rahman — Builder &amp; Developer</title>
     <link rel="canonical" href="https://ashikbro.github.io/ashikbro-portfolio/" />
-    <meta name="theme-color" content="#f5f5ef" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f5f5ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111815" media="(prefers-color-scheme: dark)" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Ashikur Rahman" />
     <meta property="og:title" content="Ashikur Rahman — Builder &amp; Developer" />
@@ -23,6 +25,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;700;800&amp;display=swap" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ashikur Rahman",
+        "url": "https://ashikbro.github.io/ashikbro-portfolio/",
+        "image": "https://ashikbro.github.io/ashikbro-portfolio/og-image.png",
+        "jobTitle": "Software Developer",
+        "description": "Developer from Dhaka turning ambitious ideas into clear, useful products — from AI assistants to decentralized systems.",
+        "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+        "sameAs": ["https://github.com/ashikbro", "https://www.linkedin.com/in/ashikurrahmandev/"]
+      }
+    </script>
   </head>
   <body>
     <div class="page-glow" aria-hidden="true"></div>
@@ -131,7 +146,7 @@
             <p>AI-assisted agriculture for crop health, weather intelligence, farm analytics, and market signals.</p>
             <p class="project-outcome"><strong>What shipped:</strong> A farm-focused demo bringing crop diagnosis, weather guidance, activity planning, and market prices into one dashboard.</p>
             <div class="project-tags"><span>React</span><span>AI</span><span>AgriTech</span></div>
-            <div class="project-links"><a href="https://ashikbro.github.io/AgroMind/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/AgroMind" target="_blank" rel="noreferrer">Source ↗</a></div>
+            <div class="project-links"><a href="#case-agro">Case study ↓</a><a href="https://ashikbro.github.io/AgroMind/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/AgroMind" target="_blank" rel="noreferrer">Source ↗</a></div>
           </article>
           <article class="project-card project-outline">
             <div class="project-topline"><span class="project-number">04</span><a class="project-arrow" href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer" aria-hidden="true" tabindex="-1">↗</a></div>
@@ -149,7 +164,7 @@
             <p>A transparent, cost-aware research dashboard for testing moving-average strategies without hiding uncertainty.</p>
             <p class="project-outcome"><strong>What shipped:</strong> A reproducible moving-average baseline evaluated with fees and slippage, with drawdown and volatility surfaced in the results.</p>
             <div class="project-tags"><span>Python</span><span>Backtesting</span><span>Risk metrics</span></div>
-            <div class="project-links"><a href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/stock-ai-predictor" target="_blank" rel="noreferrer">Source ↗</a></div>
+            <div class="project-links"><a href="#case-stock">Case study ↓</a><a href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/stock-ai-predictor" target="_blank" rel="noreferrer">Source ↗</a></div>
           </article>
         </div>
         <section class="case-studies" aria-labelledby="case-studies-title">
@@ -158,7 +173,7 @@
               <p class="eyebrow">A closer look</p>
               <h2 id="case-studies-title">From idea to implementation.</h2>
             </div>
-            <p class="section-note">The problems, decisions, and working foundations behind two projects.</p>
+            <p class="section-note">The problems, decisions, and working foundations behind the featured projects.</p>
           </div>
           <div class="case-grid">
             <article id="case-legal" class="case-study">
@@ -180,6 +195,28 @@
                 <div><dt>Outcome</dt><dd>A working foundation supports note editing, archiving, and export in <strong>2 formats</strong>: Markdown and JSON. A separate local browser showcase visualizes linked ideas; AI features remain planned.</dd></div>
               </dl>
               <a class="text-link" href="https://github.com/ashikbro/second-brain-assistant" target="_blank" rel="noreferrer">Explore the implementation ↗</a>
+            </article>
+            <article id="case-agro" class="case-study">
+              <a class="case-shot" href="https://ashikbro.github.io/AgroMind/" target="_blank" rel="noreferrer"><img src="assets/agromind.jpg" width="1920" height="1200" loading="lazy" alt="AgroMind showcase page: a green hero reading “Better decisions for healthier farms” above four highlight tiles." /></a>
+              <p class="eyebrow">03 / AgriTech</p>
+              <h3>AgroMind</h3>
+              <dl class="case-details">
+                <div><dt>Problem</dt><dd>Farm decisions depend on signals that live in different places: crop health, weather, the activity calendar, and market prices.</dd></div>
+                <div><dt>Approach</dt><dd>Pair a React and TypeScript front end with an Express and MongoDB API covering diagnosis, weather, calendar, and market routes. The AI service falls back gracefully when TensorFlow is unavailable.</dd></div>
+                <div><dt>Outcome</dt><dd>A public showcase introduces <strong>6 capability areas</strong>, with the API and data models in the repository. The live page is a showcase and is not connected to the backend; recommendations are an aid, not a replacement for local expertise.</dd></div>
+              </dl>
+              <a class="text-link" href="https://github.com/ashikbro/AgroMind" target="_blank" rel="noreferrer">Explore the implementation ↗</a>
+            </article>
+            <article id="case-stock" class="case-study">
+              <a class="case-shot" href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer"><img src="assets/stock-ai-predictor.jpg" width="1920" height="1200" loading="lazy" alt="Stock AI Predictor dashboard: the headline “Test ideas. Respect uncertainty.” beside a demo equity curve ending at −2.44%." /></a>
+              <p class="eyebrow">04 / Strategy research</p>
+              <h3>Stock AI Predictor</h3>
+              <dl class="case-details">
+                <div><dt>Problem</dt><dd>Backtests often look better than reality because they ignore trading costs or quietly use prices from the future.</dd></div>
+                <div><dt>Approach</dt><dd>Compute moving-average signals only from prices available at each bar, then execute at the close with a default 0.1% fee and 0.05% slippage.</dd></div>
+                <div><dt>Outcome</dt><dd>A deterministic baseline reports <strong>4 metrics</strong>: total return, maximum drawdown, annualized volatility, and trade count. The browser dashboard runs on synthetic demo data and shows losses as plainly as gains; it is not financial advice.</dd></div>
+              </dl>
+              <a class="text-link" href="https://github.com/ashikbro/stock-ai-predictor" target="_blank" rel="noreferrer">Explore the implementation ↗</a>
             </article>
           </div>
         </section>
