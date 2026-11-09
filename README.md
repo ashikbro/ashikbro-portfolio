@@ -7,6 +7,9 @@ A responsive static portfolio for Ashikur Rahman, built with plain HTML, CSS, an
 The featured work distinguishes source repositories from public showcases.
 Current live demos include AgroMind and Stock AI Predictor; the other featured
 projects link to their implementation and engineering evidence.
+Two case studies describe the problem, approach, and implemented scope behind
+My Legal AI Buddy and Second Brain Assistant. The skills section summarizes
+technologies used in the projects.
 
 ## Local preview
 
