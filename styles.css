@@ -73,10 +73,12 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
 .project-dark .art-accent-line { stroke: var(--lime); }
 .project-type { margin: 16px 0 11px; text-transform: uppercase; letter-spacing: .12em; font: 10px var(--mono); opacity: .65; }
 .project-card h3 { margin-bottom: 14px; font-size: 30px; letter-spacing: -.06em; }
-.project-card > p:not(.project-type) { max-width: 360px; margin-bottom: auto; color: inherit; opacity: .72; font-size: 13px; line-height: 1.7; }
+.project-card > p:not(.project-type):not(.project-outcome) { max-width: 360px; margin-bottom: 0; color: inherit; opacity: .72; font-size: 13px; line-height: 1.7; }
+.project-outcome { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid currentColor; color: inherit; opacity: .82; font-size: 12px; line-height: 1.6; }
+.project-outcome strong { display: block; margin-bottom: 5px; font: 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; opacity: .72; }
 .live-label { color: #527c3f; font-weight: 800; }
 .project-dark .live-label { color: var(--lime); }
-.project-links { display: flex; gap: 14px; margin-top: 20px; font: 11px var(--mono); }
+.project-links { display: flex; gap: 14px; margin-top: auto; padding-top: 20px; font: 11px var(--mono); }
 .project-links a { border-bottom: 1px solid currentColor; padding-bottom: 3px; }
 .project-links a:hover { color: var(--orange); }
 .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 28px; }
