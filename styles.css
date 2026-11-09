@@ -103,9 +103,10 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
 .capabilities { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 34px; }
 .contact-section { display: flex; justify-content: space-between; align-items: end; gap: 50px; padding: 72px 64px; color: var(--ink); background: var(--orange); }
 .contact-section .eyebrow, .contact-section h2 em { color: var(--ink); }
-.contact-action { max-width: 290px; }
+.contact-action { max-width: 340px; }
 .contact-action p { color: var(--ink); font-size: 13px; line-height: 1.7; }
-.button-light { margin-top: 18px; color: var(--ink); background: var(--paper); }
+.contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 18px; }
+.button-light { color: var(--ink); background: var(--paper); }
 .site-footer { display: flex; justify-content: space-between; padding: 30px 0; color: var(--muted); font: 10px var(--mono); }
 .site-footer a { color: var(--ink); }
 .footer-note { margin-left: auto; margin-right: 40px; }
