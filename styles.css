@@ -120,6 +120,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
 .about-copy > p:not(.eyebrow) { max-width: 590px; color: var(--muted); font-size: 15px; line-height: 1.85; }
 .capabilities { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 34px; }
 .experience-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; border-top: 1px solid var(--line); }
+.resume-link { margin-top: 30px; }
 .timeline { margin: 0; padding: 0; list-style: none; }
 .timeline li { padding: 22px 0; border-top: 1px solid var(--line); }
 .timeline-date { margin-bottom: 10px; color: var(--muted); font: 11px var(--mono); text-transform: uppercase; letter-spacing: .12em; }
