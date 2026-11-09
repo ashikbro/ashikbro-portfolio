@@ -14,6 +14,8 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
 a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+.project-dark a:focus-visible, .project-dark button:focus-visible { outline-color: var(--paper); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .page-glow { position: fixed; inset: -20rem auto auto 50%; width: 40rem; height: 40rem; background: rgba(201, 232, 229, .38); filter: blur(80px); border-radius: 50%; pointer-events: none; z-index: -1; }
 .section-shell, .site-header { width: min(1120px, calc(100% - 64px)); margin: auto; }
@@ -51,7 +53,7 @@ h1 em, h2 em { color: var(--orange); font-family: Georgia, serif; font-weight: 4
 h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter-spacing: -.08em; }
 .section-note { width: 280px; margin-bottom: 4px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.project-card { min-height: 360px; display: flex; flex-direction: column; padding: 28px; transition: transform .25s, box-shadow .25s; }
+.project-card { min-height: 400px; display: flex; flex-direction: column; padding: 28px; transition: transform .25s, box-shadow .25s; }
 .project-card:hover { transform: translateY(-5px); box-shadow: 0 18px 35px rgba(23,33,29,.1); }
 .project-featured { background: var(--lime); }
 .project-dark { color: var(--paper); background: var(--ink); }
@@ -60,12 +62,24 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
 .project-topline { display: flex; justify-content: space-between; font: 12px var(--mono); }
 .project-number { opacity: .6; }
 .project-arrow { font-size: 22px; }
-.project-type { margin: 58px 0 13px; text-transform: uppercase; letter-spacing: .12em; font: 10px var(--mono); opacity: .65; }
+.project-art { height: 110px; margin-top: 8px; }
+.project-art svg { width: 100%; height: 100%; overflow: visible; transition: transform .3s ease; }
+.project-card:hover .project-art svg { transform: scale(1.025); }
+.art-sheet, .art-node { fill: rgba(255,255,255,.28); stroke: currentColor; stroke-width: 1.5; }
+.art-line { stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.art-grid { stroke: currentColor; stroke-width: 1; opacity: .18; }
+.art-accent { fill: var(--orange); }
+.art-accent-line { stroke: var(--orange); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.project-dark .art-accent { fill: var(--lime); }
+.project-dark .art-accent-line { stroke: var(--lime); }
+.project-type { margin: 16px 0 11px; text-transform: uppercase; letter-spacing: .12em; font: 10px var(--mono); opacity: .65; }
 .project-card h3 { margin-bottom: 14px; font-size: 30px; letter-spacing: -.06em; }
-.project-card > p:not(.project-type) { max-width: 360px; margin-bottom: auto; color: inherit; opacity: .72; font-size: 13px; line-height: 1.7; }
+.project-card > p:not(.project-type):not(.project-outcome) { max-width: 360px; margin-bottom: 0; color: inherit; opacity: .72; font-size: 13px; line-height: 1.7; }
+.project-outcome { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid currentColor; color: inherit; opacity: .82; font-size: 12px; line-height: 1.6; }
+.project-outcome strong { display: block; margin-bottom: 5px; font: 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; opacity: .72; }
 .live-label { color: #527c3f; font-weight: 800; }
 .project-dark .live-label { color: var(--lime); }
-.project-links { display: flex; gap: 14px; margin-top: 20px; font: 11px var(--mono); }
+.project-links { display: flex; gap: 14px; margin-top: auto; padding-top: 20px; font: 11px var(--mono); }
 .project-links a { border-bottom: 1px solid currentColor; padding-bottom: 3px; }
 .project-links a:hover { color: var(--orange); }
 .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 28px; }
@@ -121,4 +135,8 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter
   .contact-action { margin-top: 38px; }
   .site-footer { gap: 15px; flex-wrap: wrap; }
   .footer-note { margin: 0; order: 3; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
 }
