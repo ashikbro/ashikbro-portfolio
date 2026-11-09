@@ -6,7 +6,9 @@
     <meta name="description" content="Ashikur Rahman's portfolio — software builder exploring useful products, AI, and decentralized technology." />
     <title>Ashikur Rahman — Builder &amp; Developer</title>
     <link rel="canonical" href="https://ashikbro.github.io/ashikbro-portfolio/" />
-    <meta name="theme-color" content="#f5f5ef" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f5f5ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111815" media="(prefers-color-scheme: dark)" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Ashikur Rahman" />
     <meta property="og:title" content="Ashikur Rahman — Builder &amp; Developer" />
@@ -23,6 +25,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;700;800&amp;display=swap" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ashikur Rahman",
+        "url": "https://ashikbro.github.io/ashikbro-portfolio/",
+        "image": "https://ashikbro.github.io/ashikbro-portfolio/assets/ashikur-rahman.jpg",
+        "jobTitle": "AI & Full-Stack Developer",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "North South University" },
+        "description": "Developer from Dhaka turning ambitious ideas into clear, useful products — from AI assistants to decentralized systems.",
+        "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+        "email": "mailto:ashikur.ar.ar@gmail.com",
+        "sameAs": ["https://github.com/ashikbro", "https://www.linkedin.com/in/ashikurrahmandev/"]
+      }
+    </script>
   </head>
   <body>
     <div class="page-glow" aria-hidden="true"></div>
@@ -35,6 +52,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="#work">Work</a>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <a class="nav-link" href="https://github.com/ashikbro" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
@@ -56,8 +74,7 @@
           <div class="orbit orbit-one"></div>
           <div class="orbit orbit-two"></div>
           <div class="profile-avatar">
-            <span aria-hidden="true">AR</span>
-            <span class="sr-only">Ashikur Rahman</span>
+            <img src="assets/ashikur-rahman.jpg" width="480" height="480" alt="Ashikur Rahman" />
           </div>
           <div class="hero-card-label">Currently exploring</div>
           <strong>AI × ownership × human creativity</strong>
@@ -131,7 +148,7 @@
             <p>AI-assisted agriculture for crop health, weather intelligence, farm analytics, and market signals.</p>
             <p class="project-outcome"><strong>What shipped:</strong> A farm-focused demo bringing crop diagnosis, weather guidance, activity planning, and market prices into one dashboard.</p>
             <div class="project-tags"><span>React</span><span>AI</span><span>AgriTech</span></div>
-            <div class="project-links"><a href="https://ashikbro.github.io/AgroMind/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/AgroMind" target="_blank" rel="noreferrer">Source ↗</a></div>
+            <div class="project-links"><a href="#case-agro">Case study ↓</a><a href="https://ashikbro.github.io/AgroMind/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/AgroMind" target="_blank" rel="noreferrer">Source ↗</a></div>
           </article>
           <article class="project-card project-outline">
             <div class="project-topline"><span class="project-number">04</span><a class="project-arrow" href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer" aria-hidden="true" tabindex="-1">↗</a></div>
@@ -149,7 +166,7 @@
             <p>A transparent, cost-aware research dashboard for testing moving-average strategies without hiding uncertainty.</p>
             <p class="project-outcome"><strong>What shipped:</strong> A reproducible moving-average baseline evaluated with fees and slippage, with drawdown and volatility surfaced in the results.</p>
             <div class="project-tags"><span>Python</span><span>Backtesting</span><span>Risk metrics</span></div>
-            <div class="project-links"><a href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/stock-ai-predictor" target="_blank" rel="noreferrer">Source ↗</a></div>
+            <div class="project-links"><a href="#case-stock">Case study ↓</a><a href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/stock-ai-predictor" target="_blank" rel="noreferrer">Source ↗</a></div>
           </article>
         </div>
         <section class="case-studies" aria-labelledby="case-studies-title">
@@ -158,7 +175,7 @@
               <p class="eyebrow">A closer look</p>
               <h2 id="case-studies-title">From idea to implementation.</h2>
             </div>
-            <p class="section-note">The problems, decisions, and working foundations behind two projects.</p>
+            <p class="section-note">The problems, decisions, and working foundations behind the featured projects.</p>
           </div>
           <div class="case-grid">
             <article id="case-legal" class="case-study">
@@ -180,6 +197,28 @@
                 <div><dt>Outcome</dt><dd>A working foundation supports note editing, archiving, and export in <strong>2 formats</strong>: Markdown and JSON. A separate local browser showcase visualizes linked ideas; AI features remain planned.</dd></div>
               </dl>
               <a class="text-link" href="https://github.com/ashikbro/second-brain-assistant" target="_blank" rel="noreferrer">Explore the implementation ↗</a>
+            </article>
+            <article id="case-agro" class="case-study">
+              <a class="case-shot" href="https://ashikbro.github.io/AgroMind/" target="_blank" rel="noreferrer"><img src="assets/agromind.jpg" width="1920" height="1200" loading="lazy" alt="AgroMind showcase page: a green hero reading “Better decisions for healthier farms” above four highlight tiles." /></a>
+              <p class="eyebrow">03 / AgriTech</p>
+              <h3>AgroMind</h3>
+              <dl class="case-details">
+                <div><dt>Problem</dt><dd>Farm decisions depend on signals that live in different places: crop health, weather, the activity calendar, and market prices.</dd></div>
+                <div><dt>Approach</dt><dd>Pair a React and TypeScript front end with an Express and MongoDB API covering diagnosis, weather, calendar, and market routes. The AI service falls back gracefully when TensorFlow is unavailable.</dd></div>
+                <div><dt>Outcome</dt><dd>A public showcase introduces <strong>6 capability areas</strong>, with the API and data models in the repository. The live page is a showcase and is not connected to the backend; recommendations are an aid, not a replacement for local expertise.</dd></div>
+              </dl>
+              <a class="text-link" href="https://github.com/ashikbro/AgroMind" target="_blank" rel="noreferrer">Explore the implementation ↗</a>
+            </article>
+            <article id="case-stock" class="case-study">
+              <a class="case-shot" href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer"><img src="assets/stock-ai-predictor.jpg" width="1920" height="1200" loading="lazy" alt="Stock AI Predictor dashboard: the headline “Test ideas. Respect uncertainty.” beside a demo equity curve ending at −2.44%." /></a>
+              <p class="eyebrow">04 / Strategy research</p>
+              <h3>Stock AI Predictor</h3>
+              <dl class="case-details">
+                <div><dt>Problem</dt><dd>Backtests often look better than reality because they ignore trading costs or quietly use prices from the future.</dd></div>
+                <div><dt>Approach</dt><dd>Compute moving-average signals only from prices available at each bar, then execute at the close with a default 0.1% fee and 0.05% slippage.</dd></div>
+                <div><dt>Outcome</dt><dd>A deterministic baseline reports <strong>4 metrics</strong>: total return, maximum drawdown, annualized volatility, and trade count. The browser dashboard runs on synthetic demo data and shows losses as plainly as gains; it is not financial advice.</dd></div>
+              </dl>
+              <a class="text-link" href="https://github.com/ashikbro/stock-ai-predictor" target="_blank" rel="noreferrer">Explore the implementation ↗</a>
             </article>
           </div>
         </section>
@@ -207,12 +246,47 @@
         <div class="about-copy">
           <p class="eyebrow">A little about me</p>
           <h2>Technology should feel <em>human.</em></h2>
-          <p>I enjoy working at the intersection of engineering and imagination. My projects often start with a question: can this be simpler, more open, or more empowering for the person using it?</p>
-          <p>When I’m not building, I’m learning about emerging technologies and looking for the next interesting problem worth solving.</p>
+          <p>I’m an AI and full-stack developer based in Dhaka. Since 2024 I’ve built client-facing web platforms at a software and IT solutions firm, working in React, Next.js, TypeScript, and Flask, and I’ve freelanced for international clients since 2022.</p>
+          <p>Alongside web work I build computer vision systems with YOLO and CNNs. I led the AI vision and sensor integration for a fire-fighting humanoid robot, my capstone at North South University, and I use SHAP to explain what the models are doing.</p>
+          <p>I’m open to full-time, remote, and engineering roles.</p>
           <div class="capabilities">
-            <span>Product thinking</span><span>Full-stack development</span><span>AI experiments</span><span>Web3 systems</span>
+            <span>Full-stack development</span><span>Computer vision</span><span>Explainable AI</span><span>Robotics</span>
           </div>
         </div>
+      </section>
+
+      <section id="experience" class="experience-section section-shell section-block" aria-labelledby="experience-title">
+        <div>
+          <p class="eyebrow">Experience &amp; education</p>
+          <h2 id="experience-title">Where I’ve worked.</h2>
+          <a class="button button-primary resume-link" href="assets/Ashikur-Rahman-Resume.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
+        </div>
+        <ol class="timeline">
+          <li>
+            <p class="timeline-date">May 2024 – Present</p>
+            <h3>Full-Stack &amp; AI Developer</h3>
+            <p class="timeline-org">Software &amp; IT solutions firm · Dhaka</p>
+            <p>Build and maintain client-facing web platforms with React, Next.js, TypeScript, and Flask or Node back ends. Integrate machine learning features and analytics dashboards into existing enterprise applications, and tune database queries and API response times.</p>
+          </li>
+          <li>
+            <p class="timeline-date">Jan 2022 – Present</p>
+            <h3>Frontend &amp; AI Developer</h3>
+            <p class="timeline-org">Freelance</p>
+            <p>Design and deploy responsive web apps with React, Next.js, and Firebase for international clients, including reusable component libraries and performance-focused interfaces.</p>
+          </li>
+          <li>
+            <p class="timeline-date">2024 – 2025</p>
+            <h3>Capstone Lead, Fire-Fighting Humanoid Robot</h3>
+            <p class="timeline-org">North South University</p>
+            <p>Led the AI vision and sensor-fusion integration for an autonomous humanoid robot that detects fire in real time, navigates toward it, and extinguishes it.</p>
+          </li>
+          <li>
+            <p class="timeline-date">2020 – 2025</p>
+            <h3>B.Sc. in Computer Science &amp; Engineering</h3>
+            <p class="timeline-org">North South University · Dhaka</p>
+            <p>100 of 134 credits completed. Coursework in artificial intelligence, machine learning, operating systems, computer networks, and web engineering.</p>
+          </li>
+        </ol>
       </section>
 
       <section id="skills" class="skills-section section-shell section-block" aria-labelledby="skills-title">
@@ -222,8 +296,9 @@
         </div>
         <div class="skills-list">
           <div><h3>Languages</h3><p>Python · TypeScript · JavaScript · HTML · CSS</p></div>
-          <div><h3>Web &amp; data</h3><p>React · Next.js · SQLite · Prisma</p></div>
-          <div><h3>Practice</h3><p>Local-first applications · Testing · GitHub Actions</p></div>
+          <div><h3>AI &amp; ML</h3><p>PyTorch · YOLO · CNNs · OpenCV · scikit-learn · SHAP</p></div>
+          <div><h3>Web &amp; data</h3><p>React · Next.js · Tailwind CSS · Flask · Firebase · PostgreSQL · SQLite · Prisma</p></div>
+          <div><h3>Practice</h3><p>Local-first applications · REST APIs · Testing · GitHub Actions</p></div>
         </div>
       </section>
 
@@ -236,6 +311,7 @@
           <p>Open to collaborations, interesting challenges, and thoughtful conversations.</p>
           <div class="contact-links">
             <a class="button button-light" href="https://www.linkedin.com/in/ashikurrahmandev/" target="_blank" rel="noreferrer">Message me on LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="mailto:ashikur.ar.ar@gmail.com">Email</a>
             <a class="text-link" href="https://github.com/ashikbro" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           </div>
         </div>
