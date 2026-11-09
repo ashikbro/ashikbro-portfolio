@@ -14,7 +14,8 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
 a { color: inherit; text-decoration: none; }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+.project-dark a:focus-visible, .project-dark button:focus-visible { outline-color: var(--paper); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .page-glow { position: fixed; inset: -20rem auto auto 50%; width: 40rem; height: 40rem; background: rgba(201, 232, 229, .38); filter: blur(80px); border-radius: 50%; pointer-events: none; z-index: -1; }
 .section-shell, .site-header { width: min(1120px, calc(100% - 64px)); margin: auto; }
