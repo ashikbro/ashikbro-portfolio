@@ -35,6 +35,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="#work">Work</a>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <a class="nav-link" href="https://github.com/ashikbro" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
@@ -90,10 +91,10 @@
             </div>
             <p class="project-type">Productivity · <span class="live-label">Product build</span></p>
             <h3>My Legal AI Buddy</h3>
-            <p>A local-first assistant that summarizes contract sections and flags clauses that may need a closer look.</p>
-            <p class="project-outcome"><strong>What shipped:</strong> Local contract review with section summaries, source-linked findings, and SQLite document history—without sending documents to an AI provider.</p>
+            <p>A local-first assistant that identifies contract terms and flags clauses that may need a closer look.</p>
+            <p class="project-outcome"><strong>What shipped:</strong> Local contract review with source excerpts and SQLite document history—without sending documents to an AI provider.</p>
             <div class="project-tags"><span>TypeScript</span><span>Local-first</span><span>Document analysis</span></div>
-            <div class="project-links"><a href="https://github.com/ashikbro/my-legal-ai-buddy" target="_blank" rel="noreferrer">Source ↗</a><a href="https://github.com/ashikbro/my-legal-ai-buddy/pull/3" target="_blank" rel="noreferrer">Hardening PR ↗</a></div>
+            <div class="project-links"><a href="#case-legal">Case study ↓</a><a href="https://github.com/ashikbro/my-legal-ai-buddy" target="_blank" rel="noreferrer">Source ↗</a><a href="https://github.com/ashikbro/my-legal-ai-buddy/pull/3" target="_blank" rel="noreferrer">Hardening PR ↗</a></div>
           </article>
           <article class="project-card project-dark">
             <div class="project-topline"><span class="project-number">02</span><span class="project-arrow">↗</span></div>
@@ -113,7 +114,7 @@
             <p>A local-first workspace for capturing notes, connecting ideas, and exploring a knowledge graph.</p>
             <p class="project-outcome"><strong>What shipped:</strong> A SQLite-backed note store with tags, full-text search, related-note discovery, and portable Markdown and JSON exports.</p>
             <div class="project-tags"><span>Python</span><span>SQLite</span><span>Graph UI</span></div>
-            <div class="project-links"><a href="https://github.com/ashikbro/second-brain-assistant" target="_blank" rel="noreferrer">Source ↗</a><a href="https://github.com/ashikbro/second-brain-assistant/tree/main/web" target="_blank" rel="noreferrer">Showcase ↗</a></div>
+            <div class="project-links"><a href="#case-brain">Case study ↓</a><a href="https://github.com/ashikbro/second-brain-assistant" target="_blank" rel="noreferrer">Source ↗</a><a href="https://github.com/ashikbro/second-brain-assistant/tree/main/web" target="_blank" rel="noreferrer">Showcase ↗</a></div>
           </article>
           <article class="project-card project-olive">
             <div class="project-topline"><span class="project-number">03</span><span class="project-arrow">↗</span></div>
@@ -151,6 +152,37 @@
             <div class="project-links"><a href="https://ashikbro.github.io/stock-ai-predictor/" target="_blank" rel="noreferrer">Open demo ↗</a><a href="https://github.com/ashikbro/stock-ai-predictor" target="_blank" rel="noreferrer">Source ↗</a></div>
           </article>
         </div>
+        <section class="case-studies" aria-labelledby="case-studies-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">A closer look</p>
+              <h2 id="case-studies-title">From idea to implementation.</h2>
+            </div>
+            <p class="section-note">The problems, decisions, and working foundations behind two projects.</p>
+          </div>
+          <div class="case-grid">
+            <article id="case-legal" class="case-study">
+              <p class="eyebrow">01 / Document review</p>
+              <h3>My Legal AI Buddy</h3>
+              <dl class="case-details">
+                <div><dt>Problem</dt><dd>Long contracts can make important terms hard to find, while sensitive documents call for careful handling.</dd></div>
+                <div><dt>Approach</dt><dd>Use local, rule-based analysis to identify terms and show relevant source excerpts. Store account-scoped documents and version history in SQLite.</dd></div>
+                <div><dt>Outcome</dt><dd>An MVP flags <strong>7 clause categories</strong>, including liability, termination, and privacy, without sending document contents to an AI provider. Findings are heuristic, not legal advice.</dd></div>
+              </dl>
+              <a class="text-link" href="https://github.com/ashikbro/my-legal-ai-buddy" target="_blank" rel="noreferrer">Explore the implementation ↗</a>
+            </article>
+            <article id="case-brain" class="case-study">
+              <p class="eyebrow">02 / Knowledge management</p>
+              <h3>Second Brain Assistant</h3>
+              <dl class="case-details">
+                <div><dt>Problem</dt><dd>Notes become harder to rediscover when ideas are scattered and their connections are lost.</dd></div>
+                <div><dt>Approach</dt><dd>Build a local SQLite note store with tags, deterministic search, explicit links, and traversal between related notes.</dd></div>
+                <div><dt>Outcome</dt><dd>A working foundation supports note editing, archiving, and export in <strong>2 formats</strong>: Markdown and JSON. A separate local browser showcase visualizes linked ideas; AI features remain planned.</dd></div>
+              </dl>
+              <a class="text-link" href="https://github.com/ashikbro/second-brain-assistant" target="_blank" rel="noreferrer">Explore the implementation ↗</a>
+            </article>
+          </div>
+        </section>
         <div class="project-directory">
           <div class="directory-heading">
             <p class="eyebrow">More on GitHub</p>
@@ -182,6 +214,18 @@
           <div class="capabilities">
             <span>Product thinking</span><span>Full-stack development</span><span>AI experiments</span><span>Web3 systems</span>
           </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section section-shell section-block" aria-labelledby="skills-title">
+        <div>
+          <p class="eyebrow">Skills &amp; tools</p>
+          <h2 id="skills-title">The toolkit.</h2>
+        </div>
+        <div class="skills-list">
+          <div><h3>Languages</h3><p>Python · TypeScript · JavaScript · HTML · CSS</p></div>
+          <div><h3>Web &amp; data</h3><p>React · Next.js · SQLite · Prisma</p></div>
+          <div><h3>Practice</h3><p>Local-first applications · Testing · GitHub Actions</p></div>
         </div>
       </section>
 
